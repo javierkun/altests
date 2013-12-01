@@ -1,0 +1,14 @@
+# Basic index routing
+al_tests_ajax_homepage:
+    pattern:  /
+    defaults: { _controller: ALTestsAJAXBundle:Default:index }
+
+# Basic search routing
+al_tests_ajax_search:
+    pattern:  /search/{name}/{page}/{quick}
+    defaults: { _controller: ALTestsAJAXBundle:Default:search }
+
+# Express search routing
+al_tests_ajax_esearch:
+    pattern:  /easearch/{id}/{name}
+    defaults: { _controller: ALTestsAJAXBundle:Default:easearch }

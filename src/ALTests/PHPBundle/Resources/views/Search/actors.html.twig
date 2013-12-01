@@ -1,0 +1,49 @@
+{# src/ALTests/PHPBundle/Resources/views/Search/actors.html.twig #}
+{% extends 'ALTestsPHPBundle:Search:index.html.twig' %}
+{% block title %}
+	Yasasp!
+{% endblock %}
+{% block search_results %}
+	<div class="results">
+		<br />
+		{{response.total_results}} actor results for <strong>{{name}}</strong>. Select one to get movie information: <br/> <br/>
+		Page {{response.page}} of {{response.total_pages}}.<br/><br/>
+		{% if response.total_pages > 1 %}
+			<div class="navigation_block">
+				{% if response.page > 1 %}
+					<div class="navigation">
+						<a href="{{url('al_tests_php_search', { 'page': response.page - 1, 'name': name })}}">Previous</a>
+					</div>
+				{% endif %}
+				{% if response.page < response.total_pages %}
+					<div class="navigation">
+						<a href="{{url('al_tests_php_search', { 'page': response.page + 1, 'name': name })}}">Next</a>
+					</div>	
+				{% endif %}	
+				<br/><br/>
+			</div>
+		{% endif %}	
+		<ul id="results">
+			{% for entry in response.results %}
+				<li><div class="search_result">				
+					<a href="{{url('al_tests_php_esearch', { 'id': entry.id, 'name': entry.name })}}">{{entry.name}}</a> <br/> <br/>
+				</div></li>
+			{% endfor %}
+		</ul>
+		{% if response.total_pages > 1 %}
+			<div class="navigation_block">
+				{% if response.page > 1 %}
+					<div class="navigation">
+						<a href="{{url('al_tests_php_search', { 'page': response.page - 1, 'name': name })}}">Previous</a>
+					</div>
+				{% endif %}
+				{% if response.page < response.total_pages %}
+					<div class="navigation">
+						<a href="{{url('al_tests_php_search', { 'page': response.page + 1, 'name': name })}}">Next</a>
+					</div>	
+				{% endif %}	
+			</div>
+		{% endif %}	
+	</div>
+{% endblock %}
+

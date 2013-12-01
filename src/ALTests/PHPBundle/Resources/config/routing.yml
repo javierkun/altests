@@ -1,0 +1,19 @@
+# Basic index routing
+al_tests_php_homepage:
+    pattern:  /
+    defaults: { _controller: ALTestsPHPBundle:Default:index }
+
+# Basic search routing
+al_tests_php_search:
+    pattern:  /search/{name}/{page}
+    defaults: { _controller: ALTestsPHPBundle:Default:search }
+
+# Lucky search routing
+al_tests_php_qsearch:
+    pattern:  /qsearch/{name}/{quick}
+    defaults: { _controller: ALTestsPHPBundle:Default:search }
+
+# Express search routing
+al_tests_php_esearch:
+    pattern:  /esearch/{id}/{name}
+    defaults: { _controller: ALTestsPHPBundle:Default:esearch }

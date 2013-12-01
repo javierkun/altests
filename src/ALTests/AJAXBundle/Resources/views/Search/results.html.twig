@@ -1,0 +1,21 @@
+{# src/ALTests/AJAXBundle/Resources/views/Search/results.html.twig #}
+<br />
+Movie information for <a href="https://www.themoviedb.org/person/{{response.actor.id}}"><strong>{{ response.actor.name }}</strong></a>: <br/> <br/>
+<ul id="results">
+	{% for entry in response.movies %}
+		<li>
+			<div class="search_result">				
+				Movie: <a href="https://www.themoviedb.org/movie/{{entry.id}}">{{entry.title}}</a> <br/>				
+				{% if entry.character is defined %} Character: {{ entry.character }} <br/> {% endif %}
+				<div class="optional_info">
+					{% if entry.release_date is defined %} Release date: {% if entry.release_date is empty %} Unknown {% endif %} {{ entry.release_date }}. {% endif %}
+					{% if entry.original_title is defined %} Original title: {{ entry.original_title }} {% endif %} 
+				</div> <br/>
+			</div>
+		</li>
+	{% endfor %}	
+</u>
+{% if response.movies is empty %}
+	No movie acting information found for this actor.
+{% endif %}
+

@@ -1,0 +1,33 @@
+{# src/ALTests/AJAXBundle/Resources/views/Search/base.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+		<link href='http://fonts.googleapis.com/css?family=Monofett|Mountains+of+Christmas' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <!--[if lte IE 7]>
+		<style>
+			.content { margin-right: -1px; } /* este margen negativo de 1 px puede situarse en cualquiera de las columnas de este diseño con el mismo efecto corrector. */
+			ul.nav a { zoom: 1; }  /* la propiedad de zoom da a IE el desencadenante hasLayout que necesita para corregir el espacio en blanco extra existente entre los vínculos */
+		</style>
+		<![endif]-->
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<div class="logo_name"> <a href="{{url('al_tests_ajax_homepage')}}"><h1>Yasasp!</h1></a></div>
+				<div class="logo_desc"><h4>Yet Another Simple Actor Search Page</h4></div>
+		  	</div>
+		  	<div class="sidebar1"></div>
+		  	<div class="content">
+				{% block search_box %}{% endblock %}
+				{% block flash_messages %}{% endblock %}
+				{% block search_results %}{% endblock %}
+			</div>
+		  	<div class="sidebar2"></div>
+		  	<div class="footer"><div class="credits"><br/><h6>developed by: Víctor Javier Cerquera</h6></div></div>
+		</div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

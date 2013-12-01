@@ -1,0 +1,7 @@
+parameters:
+#    al_tests_php.example.class: ALTests\PHPBundle\Example
+
+services:
+#    al_tests_php.example:
+#        class: %al_tests_php.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

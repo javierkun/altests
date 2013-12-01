@@ -1,0 +1,8 @@
+al_tests_php:
+    resource: "@ALTestsPHPBundle/Resources/config/routing.yml"
+    prefix:   /PHP
+
+al_tests_ajax:
+    resource: "@ALTestsAJAXBundle/Resources/config/routing.yml"
+    prefix:   /AJAX
+

@@ -1,0 +1,32 @@
+{# src/ALTests/PHPBundle/Resources/views/Search/index.html.twig #}
+{% extends 'ALTestsPHPBundle:Search:base.html.twig' %}
+{% block title %}
+	Yasasp!
+{% endblock %}
+{% block stylesheets %}
+    <style>@import url('{{asset('bundles/altestsajax/css/styles.css')}}');</style>
+{% endblock %}
+{% block search_box %}
+	<div class="search_box">
+	<br/>
+	{{ form_start(form) }}
+		<div class="help_line"><h6>Help!</h6></div>
+		<div>
+			{{ form_widget(form.name) }}
+		</div>
+	
+		<div>
+			{{ form_widget(form.search) }}
+			{{ form_widget(form.lucky_search) }}
+		</div>
+	{{ form_end(form) }}
+	</div>
+{% endblock %}
+{% block flash_messages %}
+	{% for flashMessage in app.session.flashbag.get('flash') %}
+		<div class="flash-notice">
+			<br/>
+			{{ flashMessage }}
+		</div>
+	{% endfor %}
+{% endblock %}

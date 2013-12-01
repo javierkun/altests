@@ -1,0 +1,41 @@
+{# src/ALTests/AJAXBundle/Resources/views/Search/actors.html.twig #}
+<br />
+{{response.total_results}} actor results for <strong>{{name}}</strong>. Select one to get movie information: <br/> <br/>
+Page {{response.page}} of {{response.total_pages}}.<br/><br/>
+{% if response.total_pages > 1 %}
+	<div class="navigation_block">
+		{% if response.page > 1 %}
+			<div class="navigation">
+				<a onclick="return false;"  href="{{url('al_tests_ajax_search', { 'page': response.page - 1, 'name': name, 'quick':0 })}}">Previous</a>
+			</div>
+		{% endif %}
+		{% if response.page < response.total_pages %}
+			<div class="navigation">
+				<a onclick="return false;"  href="{{url('al_tests_ajax_search', { 'page': response.page + 1, 'name': name, 'quick':0 })}}">Next</a>
+			</div>	
+		{% endif %}	
+		<br/><br/>
+	</div>
+{% endif %}	
+<ul id="results">
+	{% for entry in response.results %}
+		<li><div class="search_result">				
+			<a onclick="return false;"  href="{{url('al_tests_ajax_esearch', { 'id': entry.id, 'name': entry.name })}}">{{entry.name}}</a> <br/> <br/>
+		</div></li>
+	{% endfor %}
+</ul>
+{% if response.total_pages > 1 %}
+	<div class="navigation_block">
+		{% if response.page > 1 %}
+			<div class="navigation">
+				<a  onclick="return false;" href="{{url('al_tests_ajax_search', { 'page': response.page - 1, 'name': name, 'quick':0 })}}">Previous</a>
+			</div>
+		{% endif %}
+		{% if response.page < response.total_pages %}
+			<div class="navigation">
+				<a onclick="return false;" href="{{url('al_tests_ajax_search', { 'page': response.page + 1, 'name': name, 'quick':0 })}}">Next</a>
+			</div>	
+		{% endif %}	
+	</div>
+{% endif %}	
+

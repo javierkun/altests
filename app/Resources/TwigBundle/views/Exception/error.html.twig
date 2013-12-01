@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<link href='http://fonts.googleapis.com/css?family=Monofett|Mountains+of+Christmas' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8" />
+        <title>	Yasasp!</title>
+		<style>@import url('/symfony/web/bundles/altestsajax/css/styles.css');</style>
+		<!--[if lte IE 7]>
+		<style>
+			.content { margin-right: -1px; } /* este margen negativo de 1 px puede situarse en cualquiera de las columnas de este diseño con el mismo efecto corrector. */
+			ul.nav a { zoom: 1; }  /* la propiedad de zoom da a IE el desencadenante hasLayout que necesita para corregir el espacio en blanco extra existente entre los vínculos */
+		</style>
+		<![endif]-->
+    </head>
+    <body>
+		<div class="container">
+			<div class="header">
+				<div class="logo_name"> <h1>Yasasp!</h1></div>
+				<div class="logo_desc"><h4>Yet Another Simple Actor Search Page</h4></div>
+		  	</div>
+		  	<div class="sidebar1"></div>
+		  	<div class="content">
+				<div class="results"><h2>Oops! An Error Occurred</h2><br/><h2>The server returned a "{{ status_code }} {{ status_text }}".</h2>
+				<br/><br/> <a href="{{url('al_tests_php_homepage')}}"><h5>Return to PHP only version homepage.</h5></a>
+				<br/><br/> <a href="{{url('al_tests_ajax_homepage')}}"><h5>Return to PHP only version homepage.</h5></a></div>
+			</div>
+		  	<div class="sidebar2"></div>
+		  	<div class="footer"><div class="credits"><br/><h6>developed by: Víctor Javier Cerquera</h6></div></div>
+		</div>
+            </body>
+</html>
