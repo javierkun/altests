@@ -30,7 +30,7 @@ function buttonSubmit() {
 // Builds an url to be loaded and load it dinamically.
 $(document).ready(function() {
 	$('.results').on("click", "a", function (e){  // Links Handling on results block
-		handleLinks(e.toElement.href);
+		handleLinks(e.currentTarget.href);
 	});
 	
 	$("#form_search").click(function() {  // Standard search button
