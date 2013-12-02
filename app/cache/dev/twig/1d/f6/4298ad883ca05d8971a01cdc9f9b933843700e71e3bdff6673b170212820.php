@@ -24,7 +24,7 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_04c5c0fce60f7f540fe460864d7250e959d25fca66f4e96c8c9d34a45b69c05d"] = $this;
+        $context["__internal_c824051cf2e21d5886b25815871ebfa75907df4dbe51536fea5069936110bd20"] = $this;
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -44,7 +44,7 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
     {
         // line 13
         echo "    ";
-        if (twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "calledlisteners"))) {
+        if (twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "calledlisteners"))) {
             // line 14
             echo "        ";
             $this->displayBlock("panelContent", $context, $blocks);
@@ -74,17 +74,17 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
         ";
         // line 31
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "calledlisteners"));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "calledlisteners"));
         foreach ($context['_seq'] as $context["_key"] => $context["listener"]) {
             // line 32
             echo "            <tr>
                 <td><code>";
             // line 33
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "event"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "event"), "html", null, true);
             echo "</code></td>
                 <td><code>";
             // line 34
-            echo $context["__internal_04c5c0fce60f7f540fe460864d7250e959d25fca66f4e96c8c9d34a45b69c05d"]->getdisplay_listener((isset($context["listener"]) ? $context["listener"] : null));
+            echo $context["__internal_c824051cf2e21d5886b25815871ebfa75907df4dbe51536fea5069936110bd20"]->getdisplay_listener((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")));
             echo "</code></td>
             </tr>
         ";
@@ -97,7 +97,7 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
 
     ";
         // line 39
-        if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "notcalledlisteners")) {
+        if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "notcalledlisteners")) {
             // line 40
             echo "        <h2>Not Called Listeners</h2>
 
@@ -108,21 +108,21 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
             </tr>
             ";
             // line 47
-            $context["listeners"] = $this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "notcalledlisteners");
+            $context["listeners"] = $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "notcalledlisteners");
             // line 48
             echo "            ";
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable(twig_sort_filter(twig_get_array_keys_filter((isset($context["listeners"]) ? $context["listeners"] : null))));
+            $context['_seq'] = twig_ensure_traversable(twig_sort_filter(twig_get_array_keys_filter((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")))));
             foreach ($context['_seq'] as $context["_key"] => $context["listener"]) {
                 // line 49
                 echo "                <tr>
                     <td><code>";
                 // line 50
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : null), (isset($context["listener"]) ? $context["listener"] : null), array(), "array"), "event"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), (isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), array(), "array"), "event"), "html", null, true);
                 echo "</code></td>
                     <td><code>";
                 // line 51
-                echo $context["__internal_04c5c0fce60f7f540fe460864d7250e959d25fca66f4e96c8c9d34a45b69c05d"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : null), (isset($context["listener"]) ? $context["listener"] : null), array(), "array"));
+                echo $context["__internal_c824051cf2e21d5886b25815871ebfa75907df4dbe51536fea5069936110bd20"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), (isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), array(), "array"));
                 echo "</code></td>
                 </tr>
             ";
@@ -149,43 +149,43 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
         try {
             // line 59
             echo "    ";
-            if (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "type") == "Closure")) {
+            if (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type") == "Closure")) {
                 // line 60
                 echo "        Closure
     ";
-            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "type") == "Function")) {
+            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type") == "Function")) {
                 // line 62
                 echo "        ";
-                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "file"), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "line"));
+                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "file"), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "line"));
                 // line 63
                 echo "        ";
-                if ((isset($context["link"]) ? $context["link"] : null)) {
+                if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
                     echo "<a href=\"";
-                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
                     echo "\">";
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "function"), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "function"), "html", null, true);
                     echo "</a>";
                 } else {
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "function"), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "function"), "html", null, true);
                 }
                 // line 64
                 echo "    ";
-            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "type") == "Method")) {
+            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type") == "Method")) {
                 // line 65
                 echo "        ";
-                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "file"), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "line"));
+                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "file"), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "line"));
                 // line 66
                 echo "        ";
-                echo $this->env->getExtension('code')->abbrClass($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "class"));
+                echo $this->env->getExtension('code')->abbrClass($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "class"));
                 echo "::";
-                if ((isset($context["link"]) ? $context["link"] : null)) {
+                if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
                     echo "<a href=\"";
-                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
                     echo "\">";
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "method"), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "method"), "html", null, true);
                     echo "</a>";
                 } else {
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "method"), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "method"), "html", null, true);
                 }
                 // line 67
                 echo "    ";
@@ -211,6 +211,6 @@ class __TwigTemplate_1df64298ad883ca05d8971a01cdc9f9b933843700e71e3bdff6673b1702
 
     public function getDebugInfo()
     {
-        return array (  175 => 65,  161 => 63,  118 => 49,  462 => 202,  449 => 198,  446 => 197,  441 => 196,  439 => 195,  431 => 189,  429 => 188,  422 => 184,  415 => 180,  408 => 176,  401 => 172,  394 => 168,  380 => 160,  373 => 156,  361 => 146,  351 => 141,  348 => 140,  342 => 137,  338 => 135,  335 => 134,  329 => 131,  325 => 129,  323 => 128,  320 => 127,  315 => 125,  303 => 122,  300 => 121,  289 => 113,  286 => 112,  275 => 105,  270 => 102,  267 => 101,  262 => 98,  256 => 96,  248 => 94,  233 => 87,  226 => 84,  216 => 79,  213 => 78,  207 => 75,  200 => 72,  197 => 71,  194 => 70,  191 => 67,  185 => 66,  181 => 65,  178 => 66,  172 => 64,  165 => 60,  153 => 56,  150 => 55,  113 => 48,  81 => 23,  70 => 19,  110 => 27,  104 => 24,  65 => 15,  97 => 29,  148 => 46,  137 => 42,  134 => 54,  114 => 35,  84 => 24,  58 => 24,  126 => 40,  100 => 39,  90 => 27,  76 => 31,  53 => 12,  34 => 4,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 199,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 164,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 143,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 124,  309 => 97,  305 => 95,  298 => 120,  294 => 90,  285 => 89,  283 => 88,  278 => 106,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 90,  229 => 85,  220 => 81,  214 => 69,  177 => 65,  169 => 60,  140 => 58,  132 => 51,  128 => 49,  107 => 36,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 69,  159 => 61,  143 => 44,  135 => 53,  119 => 40,  102 => 40,  71 => 16,  67 => 24,  63 => 26,  59 => 14,  38 => 6,  94 => 27,  89 => 20,  85 => 25,  75 => 19,  68 => 17,  56 => 12,  87 => 34,  21 => 2,  26 => 6,  93 => 27,  88 => 26,  78 => 22,  46 => 13,  27 => 3,  31 => 3,  28 => 4,  201 => 92,  196 => 90,  183 => 82,  171 => 61,  166 => 71,  163 => 62,  158 => 62,  156 => 58,  151 => 59,  142 => 59,  138 => 54,  136 => 56,  121 => 50,  117 => 34,  105 => 34,  91 => 24,  62 => 15,  49 => 14,  25 => 2,  24 => 4,  44 => 9,  19 => 2,  79 => 22,  72 => 31,  69 => 19,  47 => 9,  40 => 7,  37 => 6,  22 => 3,  246 => 93,  157 => 56,  145 => 46,  139 => 45,  131 => 40,  123 => 42,  120 => 35,  115 => 33,  111 => 47,  108 => 36,  101 => 26,  98 => 28,  96 => 37,  83 => 33,  74 => 17,  66 => 27,  55 => 16,  52 => 10,  50 => 19,  43 => 12,  41 => 8,  35 => 6,  32 => 5,  29 => 3,  209 => 82,  203 => 73,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 66,  176 => 63,  173 => 65,  168 => 61,  164 => 59,  162 => 59,  154 => 60,  149 => 51,  147 => 54,  144 => 49,  141 => 51,  133 => 55,  130 => 46,  125 => 51,  122 => 36,  116 => 39,  112 => 32,  109 => 34,  106 => 25,  103 => 31,  99 => 31,  95 => 28,  92 => 21,  86 => 8,  82 => 18,  80 => 32,  73 => 20,  64 => 23,  60 => 25,  57 => 11,  54 => 10,  51 => 11,  48 => 13,  45 => 10,  42 => 7,  39 => 6,  36 => 8,  33 => 4,  30 => 3,);
+        return array (  175 => 65,  161 => 63,  118 => 49,  462 => 202,  449 => 198,  446 => 197,  441 => 196,  439 => 195,  431 => 189,  429 => 188,  422 => 184,  415 => 180,  408 => 176,  401 => 172,  394 => 168,  380 => 160,  373 => 156,  361 => 146,  351 => 141,  348 => 140,  342 => 137,  338 => 135,  335 => 134,  329 => 131,  325 => 129,  323 => 128,  320 => 127,  315 => 125,  303 => 122,  300 => 121,  289 => 113,  286 => 112,  275 => 105,  270 => 102,  267 => 101,  262 => 98,  256 => 96,  248 => 94,  233 => 87,  226 => 84,  216 => 79,  213 => 78,  207 => 75,  200 => 72,  197 => 71,  194 => 70,  191 => 67,  185 => 66,  181 => 65,  178 => 66,  172 => 64,  165 => 60,  153 => 56,  150 => 55,  113 => 48,  81 => 23,  70 => 19,  110 => 27,  104 => 24,  65 => 15,  97 => 29,  148 => 46,  137 => 42,  134 => 54,  114 => 35,  84 => 24,  58 => 24,  126 => 40,  100 => 39,  90 => 27,  76 => 31,  34 => 4,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 199,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 164,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 143,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 124,  309 => 97,  305 => 95,  298 => 120,  294 => 90,  285 => 89,  283 => 88,  278 => 106,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 90,  229 => 85,  220 => 81,  214 => 69,  177 => 65,  169 => 60,  140 => 58,  132 => 51,  128 => 49,  107 => 36,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 69,  159 => 61,  143 => 44,  135 => 53,  119 => 40,  102 => 40,  71 => 16,  67 => 24,  63 => 26,  59 => 14,  38 => 6,  94 => 27,  89 => 20,  85 => 25,  75 => 19,  68 => 17,  56 => 12,  87 => 34,  21 => 2,  26 => 6,  93 => 27,  88 => 26,  78 => 22,  46 => 13,  27 => 3,  44 => 9,  31 => 3,  201 => 92,  196 => 90,  183 => 82,  171 => 61,  166 => 71,  163 => 62,  158 => 62,  156 => 58,  151 => 59,  142 => 59,  138 => 54,  136 => 56,  121 => 50,  117 => 34,  105 => 34,  91 => 24,  62 => 15,  49 => 14,  25 => 2,  24 => 4,  53 => 12,  28 => 4,  19 => 2,  79 => 22,  72 => 31,  69 => 19,  47 => 9,  40 => 7,  37 => 6,  22 => 3,  246 => 93,  157 => 56,  145 => 46,  139 => 45,  131 => 40,  123 => 42,  120 => 35,  115 => 33,  111 => 47,  108 => 36,  101 => 26,  98 => 28,  96 => 37,  83 => 33,  74 => 17,  66 => 27,  55 => 16,  52 => 10,  50 => 19,  43 => 12,  41 => 8,  35 => 6,  32 => 5,  29 => 3,  209 => 82,  203 => 73,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 66,  176 => 63,  173 => 65,  168 => 61,  164 => 59,  162 => 59,  154 => 60,  149 => 51,  147 => 54,  144 => 49,  141 => 51,  133 => 55,  130 => 46,  125 => 51,  122 => 36,  116 => 39,  112 => 32,  109 => 34,  106 => 25,  103 => 31,  99 => 31,  95 => 28,  92 => 21,  86 => 8,  82 => 18,  80 => 32,  73 => 20,  64 => 23,  60 => 25,  57 => 11,  54 => 10,  51 => 11,  48 => 13,  45 => 10,  42 => 7,  39 => 6,  36 => 8,  33 => 4,  30 => 3,);
     }
 }

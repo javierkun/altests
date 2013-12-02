@@ -23,7 +23,10 @@ class __TwigTemplate_ca13ff74decf3d3c616645f013bb9863bb991d4e15bfcc00fc4d30fe97a
 \t\t<link href='http://fonts.googleapis.com/css?family=Monofett|Mountains+of+Christmas' rel='stylesheet' type='text/css'>
         <meta charset=\"UTF-8\" />
         <title>\tYasasp!</title>
-\t\t<style>@import url('/symfony/web/bundles/altestsajax/css/styles.css');</style>
+\t\t<style>@import url('";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/altestsajax/css/styles.css"), "html", null, true);
+        echo "');</style>
 \t\t<!--[if lte IE 7]>
 \t\t<style>
 \t\t\t.content { margin-right: -1px; } /* este margen negativo de 1 px puede situarse en cualquiera de las columnas de este diseño con el mismo efecto corrector. */
@@ -74,6 +77,6 @@ class __TwigTemplate_ca13ff74decf3d3c616645f013bb9863bb991d4e15bfcc00fc4d30fe97a
 
     public function getDebugInfo()
     {
-        return array (  50 => 25,  44 => 24,  22 => 2,  19 => 1,  209 => 82,  203 => 78,  199 => 76,  193 => 73,  189 => 71,  187 => 70,  182 => 68,  176 => 64,  173 => 63,  168 => 62,  164 => 60,  162 => 59,  154 => 54,  149 => 51,  147 => 50,  144 => 49,  141 => 48,  133 => 42,  130 => 41,  125 => 38,  122 => 37,  116 => 36,  112 => 35,  109 => 34,  106 => 33,  103 => 32,  99 => 30,  95 => 28,  92 => 27,  86 => 24,  82 => 22,  80 => 21,  73 => 19,  64 => 15,  60 => 13,  57 => 12,  54 => 26,  51 => 10,  48 => 9,  45 => 8,  42 => 7,  39 => 6,  36 => 5,  33 => 4,  30 => 3,);
+        return array (  53 => 25,  47 => 24,  28 => 8,  22 => 2,  19 => 1,  209 => 82,  203 => 78,  199 => 76,  193 => 73,  189 => 71,  187 => 70,  182 => 68,  176 => 64,  173 => 63,  168 => 62,  164 => 60,  162 => 59,  154 => 54,  149 => 51,  147 => 50,  144 => 49,  141 => 48,  133 => 42,  130 => 41,  125 => 38,  122 => 37,  116 => 36,  112 => 35,  109 => 34,  106 => 33,  103 => 32,  99 => 30,  95 => 28,  92 => 27,  86 => 24,  82 => 22,  80 => 21,  73 => 19,  64 => 15,  60 => 13,  57 => 26,  54 => 11,  51 => 10,  48 => 9,  45 => 8,  42 => 7,  39 => 6,  36 => 5,  33 => 4,  30 => 3,);
     }
 }
